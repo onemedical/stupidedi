@@ -25,13 +25,13 @@ module Stupidedi
       # @example
       #   nil.blank?    #=> true
       #
-      def blank?
-        require "thread"
-        $BLANK ||= Thread::Queue.new
-        $BLANK << caller
+      # def blank?
+      #   require "thread"
+      #   $BLANK ||= Thread::Queue.new
+      #   $BLANK << caller
                 
-        true
-      end
+      #   true
+      # end
 
       def present?
         false
