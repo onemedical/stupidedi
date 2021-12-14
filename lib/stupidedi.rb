@@ -13,7 +13,7 @@ end
 $:.unshift(File.expand_path("..", __FILE__))
 
 require "ruby/array"
-require "ruby/blank"
+#{}require "ruby/blank"
 require "ruby/exception"
 require "ruby/hash"
 require "ruby/module"

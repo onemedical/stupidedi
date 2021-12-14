@@ -45,8 +45,7 @@ module Stupidedi
         require "thread"
         $BLANK ||= Thread::Queue.new
         $BLANK << caller
-
-        
+                
         false
       end
 
