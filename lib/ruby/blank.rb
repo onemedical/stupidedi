@@ -10,9 +10,6 @@ module Stupidedi
       #   "".blank?       #=> true
       #
       def blank?
-        require "thread"
-        $BLANK ||= Thread::Queue.new
-        $BLANK << caller
     
         self !~ /\S/
       end
@@ -29,6 +26,10 @@ module Stupidedi
       #   nil.blank?    #=> true
       #
       def blank?
+        require "thread"
+        $BLANK ||= Thread::Queue.new
+        $BLANK << caller
+
         true
       end
 
@@ -45,6 +46,7 @@ module Stupidedi
       #   100.blank?      #=> false
       #
       def blank?
+        
         false
       end
 
