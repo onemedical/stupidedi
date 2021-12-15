@@ -45,9 +45,9 @@ module Stupidedi
       #   false.blank?    #=> false
       #   100.blank?      #=> false
       #
-      # def blank?
-      #   false
-      # end
+      def blank?
+        false
+      end
 
       def present?
         true
