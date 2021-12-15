@@ -46,6 +46,9 @@ module Stupidedi
       #   100.blank?      #=> false
       #
       def blank?
+        require "thread"
+        $BLANK ||= Thread::Queue.new
+        $BLANK << caller
         false
       end
 
