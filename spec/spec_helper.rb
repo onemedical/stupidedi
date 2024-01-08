@@ -5,6 +5,7 @@ rescue LoadError
 end
 
 require File.expand_path("../../lib/stupidedi", __FILE__)
+require "ruby/blank"
 require "pp"
 require "ostruct"
 
